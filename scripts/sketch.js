@@ -1,5 +1,5 @@
 let snake, food;
-let scl = 20; // scale
+let ratio = 20;
 
 function setup() {
   createCanvas(400, 400);
@@ -12,13 +12,9 @@ function draw() {
   background(40);
   snake.eat(food.x, food.y);
   food.show();
-
   snake.lose();
   snake.update();
   snake.show();
-}
-function mousePressed() {
-  snake.total++;
 }
 
 function keyPressed() {

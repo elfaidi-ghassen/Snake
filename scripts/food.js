@@ -1,17 +1,12 @@
 class Food {
-  #rows = Math.floor(height / scl)
-  #cols = Math.floor(width / scl)
+  #rows = Math.floor(height / ratio);
+  #cols = Math.floor(width / ratio);
   constructor() {
-    do {
-      this.x  = Math.floor(random(this.#cols)) * scl
-      this.y  = Math.floor(random(this.#rows)) * scl
-    }
-    while(snake.tail.includes(createVector(this.x, this.y)))
-
+    this.x = Math.floor(random(this.#cols)) * ratio;
+    this.y = Math.floor(random(this.#rows)) * ratio;
   }
-
   show() {
-    fill(255, 0, 100)
-    rect(this.x, this.y, scl, scl)
+    fill(255, 0, 100);
+    rect(this.x, this.y, ratio, ratio);
   }
 }
